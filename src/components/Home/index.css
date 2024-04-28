@@ -1,0 +1,116 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    width: 100%;
+    height: 50%;
+    background-color:white;
+    list-style: none;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+li img {
+    height: 100px;
+    margin: 30px;
+}
+
+.carousleCrad {
+    width: 100%;
+    position: relative;
+    height: 50%;
+}
+
+.hoverCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+    
+    background-color: white; /* Changed background color to white */
+    width: 250px;
+    z-index: 1000; /* Increased z-index */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Added box shadow for a shadow effect */
+}
+
+li:hover .hoverCard {
+    display: block; /* Show the hover card when hovering over an li */
+    opacity: 1; /* Show the hover card */
+}
+
+.categoryList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.categoryList li {
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.categoryListValue:hover {
+    
+    background-color: rgb(127, 237, 63);
+}
+
+
+
+.subcategoryContent {
+    padding: 10px;
+    background-color:white;
+}
+
+.subcategoryContent p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.subcategoryCard {
+    position: fixed;
+    padding: 5px;
+    
+    z-index: 1500;
+    /*Increasedz-index*/background-color: rgb(218, 79, 79);
+    /*Changedbackgroundcolortowhite*/width: 250px;
+    top: 44%;
+    left: 58%;
+    display: none;
+ 
+    transition: opacity 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+li:hover .subcategoryCard {
+    display: block;
+    opacity: 1;
+    background-color:white;
+}
+.subcategoryCard p:hover{
+    background-color: rgb(184, 195, 228);
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit; /* Ensures link color matches its parent element */
+  }
